@@ -1,10 +1,12 @@
 import React from 'react'
 import './App.css'
 import UserCard from './components/UserCard'
+import SearchForm from './components/SearchForm'
 
 export default class App extends React.Component {
   state = {
-    followers: []
+    followers: [],
+    searchedUser: ''
   }
 
   componentDidMount() {
@@ -14,10 +16,22 @@ export default class App extends React.Component {
       this.setState({followers: res})
     })
   }
+
+  searchUser = (username) => {
+    this.setState({searchedUser: username })
+  }
+
+
   
   render() {
     return (
+      <>
+      <SearchForm searchUser={this.searchUser} />
+
       <main className="App">
+        {/* UserCard for the user that was searched for (if any) */}
+        {this.state.searchedUser && <UserCard username={this.state.searchedUser} />}
+
         {/* UserCard for the user this app is centered around*/}
         <UserCard username={this.props.username} /> 
 
@@ -26,6 +40,7 @@ export default class App extends React.Component {
           return <UserCard key={i} username={follower.login} />
         })}
       </main>
+      </>
     )
   }      
 }
