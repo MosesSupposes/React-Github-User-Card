@@ -17,7 +17,7 @@ export default class App extends React.Component {
   
   render() {
     return (
-      <main>
+      <main className="App">
         {/* UserCard for the user this app is centered around*/}
         <UserCard username={this.props.username} /> 
 

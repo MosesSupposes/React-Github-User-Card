@@ -19,11 +19,11 @@ export default class UserCard extends Component {
     
     render() {
         return (
-            <div className="App">
+            <div className="user-card">
               <h2>{this.state.login}</h2>
               <img src={this.state.avatar_url} />
-              <p>bio: {this.state.bio}</p>
-              <span>Followers: {this.state.followers}</span>
+              <p><strong>bio:</strong> {this.state.bio}</p>
+              <span><strong>Followers:</strong> {this.state.followers}</span>
             </div>
           )
     }
