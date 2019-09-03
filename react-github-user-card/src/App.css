@@ -2,6 +2,16 @@ body {
   background: rgba(5,5,5, 0.8);
 }
 
+form {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 4rem 0;
+}
+
+input {
+  padding: 0.25rem;
+}
+
 .App {
   display: grid;
   grid-template-columns: repeat(auto-fit, 500px);
@@ -18,3 +28,4 @@ body {
   padding: 1rem;
   background: rgba(75,175,175, 0.8);
 }
+
