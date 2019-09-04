@@ -1,0 +1,31 @@
+body {
+  background: rgba(5,5,5, 0.8);
+}
+
+form {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 4rem 0;
+}
+
+input {
+  padding: 0.25rem;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 500px);
+  width: 95%;
+  margin: 2rem auto;
+}
+
+.user-card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 1rem;
+  background: rgba(75,175,175, 0.8);
+}
+
